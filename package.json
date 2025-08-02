@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "live-server",
+    "build": "mkdir -p dist && cp index.html page2.html camera.html teacher.html script.js styles.css dist/"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"  
+
+  }
+}

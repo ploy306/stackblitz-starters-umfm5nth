@@ -1,0 +1,149 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ลงชื่อเข้าใช้งาน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background: #ede7f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      color: #4A4A4A;
+      font-size: 1.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    nav a:hover {
+      color: #663399;
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .login-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .login-card h2 {
+      color: #663399;
+      margin-bottom: 10px;
+    }
+
+    .login-card p {
+      font-size: 0.95em;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #663399;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>📘 เว็บไซต์เช็กชื่อนักเรียน-นักศึกษาทำเวรประจำวัน<br>แผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</h1>
+      <nav>
+        <a href="teacher.html">สำหรับครูควบคุม</a>
+         <!-- เชื่อมไป teacher.html -->
+      </nav>
+    </header>
+
+    <main>
+      <div class="login-card">
+        <h2>ลงชื่อเข้าใช้งาน</h2>
+        <p>แผนกวิชาเทคโนโลยีธุรกิจดิจิทัล | วิทยาลัยเทคนิคระยอง</p>
+        <form onsubmit="return redirectToCamera();">
+          <input type="text" id="student_id" placeholder="กรอกระดับชั้นเรียน-ห้อง" required />
+          <input type="password" id="password" placeholder="กรอกรหัสเลขประจำตัวนักเรียน 5 หลักสุดท้าย" required />
+          <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</p>
+    </footer>
+  </div>
+
+  <script>
+    function redirectToCamera() {
+      const id = document.getElementById("student_id").value;
+      const pass = document.getElementById("password").value;
+
+      if (id.trim() === "" || pass.trim() === "") {
+        alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+        return false;
+      }
+
+      localStorage.setItem("student_id", id);
+      window.location.href = "camera.html";
+      return false;
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Sarabun', sans-serif;
+  background: #ede7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: #4A4A4A;
+  font-size: 1.5em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95em;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-card h2 {
+  color: #663399;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  font-size: 0.95em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+form button {
+  background-color: #663399;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #888;
+}
